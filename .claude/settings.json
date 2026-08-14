@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm -rf build)",
+      "Bash(cmake -S . -B build -G \"MinGW Makefiles\")",
+      "Bash(cmake --build build)",
+      "PowerShell(Get-ChildItem \"$env:USERPROFILE\\\\.vscode\\\\extensions\" -Directory | Select-Object -ExpandProperty Name | Sort-Object)",
+      "Bash(find \"$HOME/.vscode/extensions\" -maxdepth 1 -iname \"*cpp-devtools*\")",
+      "Read(//c/Users/bqian/.vscode/extensions/**)",
+      "Read(//c/Users/bqian/.vscode/extensions/ms-vscode.cpp-devtools-0.5.14/**)",
+      "Read(//c/Users/bqian/AppData/Local/Programs/Microsoft VS Code/resources/app/**)",
+      "Read(//c/Program Files/Microsoft VS Code/resources/app/**)",
+      "Bash(ls \"/c/Users/bqian/AppData/Local/Programs/Microsoft VS Code/resources/app/extensions\" 2>&1 | grep -i copilot *)",
+      "Bash(find \"/c/Users/bqian/AppData/Local/Programs/Microsoft VS Code\" -maxdepth 2 -type d)",
+      "Read(//c/Users/bqian/AppData/Local/Programs/Microsoft VS Code/**)",
+      "Bash(find \"/c/Users/bqian/AppData/Local/Programs/Microsoft VS Code/a5b5009513/resources/app/extensions\" -maxdepth 1 -iname \"*copilot*\")",
+      "Read(//c/Users/bqian/AppData/Local/Programs/Microsoft VS Code/a5b5009513/resources/app/extensions/**)"
+    ]
+  }
+}
