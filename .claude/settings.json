@@ -14,7 +14,10 @@
       "Bash(find \"/c/Users/bqian/AppData/Local/Programs/Microsoft VS Code\" -maxdepth 2 -type d)",
       "Read(//c/Users/bqian/AppData/Local/Programs/Microsoft VS Code/**)",
       "Bash(find \"/c/Users/bqian/AppData/Local/Programs/Microsoft VS Code/a5b5009513/resources/app/extensions\" -maxdepth 1 -iname \"*copilot*\")",
-      "Read(//c/Users/bqian/AppData/Local/Programs/Microsoft VS Code/a5b5009513/resources/app/extensions/**)"
+      "Read(//c/Users/bqian/AppData/Local/Programs/Microsoft VS Code/a5b5009513/resources/app/extensions/**)",
+      "Bash(g++ -std=c++20 -pedantic-errors -Wall -Wextra -Werror -c src/numeric_utils.cpp -o /tmp/nu.o)",
+      "Bash(rm -f /tmp/nu.o)",
+      "Bash(./build/main.exe)"
     ]
   }
 }

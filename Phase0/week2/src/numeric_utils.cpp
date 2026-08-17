@@ -8,7 +8,7 @@ double mean(const std::vector<double>& data)
     }
 
     double sum{0.0};
-    for(double value : data) {
+    for(auto value : data) {
         sum += value; 
     }
     return sum / data.size();
@@ -22,37 +22,11 @@ double stddev(const std::vector<double>& data)
 
     double sum{0.0};
     double mu = mean(data);
-    for (double val : data) {
+    for (auto val : data) {
         sum += (val - mu) * (val - mu);
     }
     double variance = sum / data.size();
     return std::sqrt(variance);
-}
-
-double clamp(const double value, const double min, const double max)
-{
-    if(value < min) {
-        return min;
-    }
-    else if(value > max) {
-        return max;
-    }
-    else {
-        return value;
-    }
-}
-
-float clamp(const float value, const float min, const float max)
-{
-    if(value < min) {
-        return min;
-    }
-    else if(value > max) {
-        return max;
-    }
-    else {
-        return value;
-    }
 }
 
 std::vector<double> linspace(const double start, const double end, const int num_points)
@@ -69,7 +43,7 @@ std::vector<double> linspace(const double start, const double end, const int num
     std::vector<double> results(num_points);
     double val = left;
     for(int i{0}; i < num_points; ++i) {
-        results.push_back(val);
+        results[i] = val;
         val += increment;
     }
 

@@ -22,5 +22,15 @@ int main()
     std::cout << "The size of data type of d_val (double) is " <<sizeof(d_val) << std::endl;
     std::cout << "The size of data type of f_val (float) is " <<sizeof(f_val) << std::endl;
 
+    std::vector<double> res = linspace(0.0, 10.0, 5);
+    for(double val : res){
+        std::cout << val << " ";
+    }
+    std::cout << std::endl;
+
+    /*
+    int threshold = 1;
+    if(res.size() < threshold) { } //  warning: comparison of integer expressions of different signedness; the warning becomes error under -Werror
+    */
     return 0;
 }
